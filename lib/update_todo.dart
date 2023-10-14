@@ -45,7 +45,7 @@ class _UpdateTodoState extends State<UpdateTodo> {
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: Colors
-                                .black)),
+                                .blue)),
                     enabledBorder:
                     OutlineInputBorder()),
                 validator: (String? value){
@@ -63,7 +63,7 @@ class _UpdateTodoState extends State<UpdateTodo> {
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: Colors
-                                .black)),
+                                .blue)),
                     enabledBorder:
                     OutlineInputBorder()),
                 validator: (String? value){

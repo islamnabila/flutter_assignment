@@ -34,8 +34,9 @@ class _AddTodoState extends State<AddTodo> {
           TextFormField(
             controller: addtitleController,
             decoration: const InputDecoration(
+              hintText: "Add Title",
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 2),
+                  borderSide: BorderSide(color: Colors.blue, width: 2),
                 ),
                 enabledBorder: OutlineInputBorder()),
             validator: (String? value){
@@ -50,8 +51,9 @@ class _AddTodoState extends State<AddTodo> {
           TextFormField(
             controller: addDetailsController,
             decoration: const InputDecoration(
+              hintText: "Add description",
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 2),
+                  borderSide: BorderSide(color: Colors.blue, width: 2),
                 ),
                 enabledBorder: OutlineInputBorder()),
             validator: (String? value){

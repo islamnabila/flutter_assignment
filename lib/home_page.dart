@@ -22,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [
           Icon(
             Icons.search,
-            color: Colors.black,
+            color: Colors.blue,
           )
         ],
       ),
