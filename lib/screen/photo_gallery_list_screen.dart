@@ -17,18 +17,24 @@ class _PhotoGalleryListScreenState extends State<PhotoGalleryListScreen> {
   List<Photos> photoList = [];
   
   Future<List<Photos>> getPhotos()async{
-    final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/photos"));
-    var data = jsonDecode(response.body.toString());
-    if(response.statusCode ==200){
-      for(Map i in data){
-        Photos photos = Photos(title: i["title"],
-            id: i['id'],
-            url: i["url"]);
-        photoList.add(photos);
-      }return photoList;
-    }else{
-      return photoList;
+    try{
+      final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/photos"));
+      var data = jsonDecode(response.body.toString());
+      if(response.statusCode ==200){
+        for(Map i in data){
+          Photos photos = Photos(title: i["title"],
+              id: i['id'],
+              url: i["url"]);
+          photoList.add(photos);
+        }return photoList;
+      }else{
+        throw Exception('Failed to load photos');
+      }
+    }catch(e){
+      print('Error: $e');
+      return [];
     }
+
   }
   
   
